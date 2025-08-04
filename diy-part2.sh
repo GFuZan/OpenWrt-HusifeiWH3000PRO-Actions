@@ -10,8 +10,9 @@
 # See /LICENSE for more information.
 #
 
-# 编译红米AX6固件
-# cp nss-setup/config-nss.seed .config
+
+cp -rf ../merge-root/* ./
+
 # sed -i 's/# CONFIG_TARGET_qualcommax_ipq807x_DEVICE_redmi_ax6 is not set/CONFIG_TARGET_qualcommax_ipq807x_DEVICE_redmi_ax6=y/' .config
 
 # Modify default IP
