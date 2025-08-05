@@ -57,10 +57,10 @@ index b67bc9e833c0..614b675c0de2 100644
 +	// }
 +
 +	// 初始化延时定时器
-+	timer_setup(&ctx->init_timer, delayed_pwm_init, 0);
++	// timer_setup(&ctx->init_timer, delayed_pwm_init, 0);
 +
-+	// 设置定时器在1.5秒后执行（HZ为内核时钟频率，通常1000Hz即1ms精度）
-+	mod_timer(&ctx->init_timer, jiffies * (HZ * 3 / 2));
++	// mod_timer(&ctx->init_timer, jiffies + (HZ * 3 / 2));
++   set_pwm(ctx, 0);
  
  	return 0;
  }
